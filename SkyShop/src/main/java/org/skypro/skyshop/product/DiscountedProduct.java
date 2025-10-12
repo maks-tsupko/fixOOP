@@ -25,4 +25,14 @@ public class DiscountedProduct extends Product {
     public boolean isSpecial() {
         return discount > 0;
     }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
 }

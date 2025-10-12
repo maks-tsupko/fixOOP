@@ -20,4 +20,14 @@ public class SimpleProduct extends Product {
     public boolean isSpecial() {
         return false;
     }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
 }

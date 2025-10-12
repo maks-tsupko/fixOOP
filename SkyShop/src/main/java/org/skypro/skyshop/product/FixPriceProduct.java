@@ -16,4 +16,14 @@ public class FixPriceProduct extends Product {
     public boolean isSpecial() {
         return false;
     }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
 }
