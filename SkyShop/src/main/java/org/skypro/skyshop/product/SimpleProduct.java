@@ -4,7 +4,7 @@ public class SimpleProduct extends Product {
     private final int price;
 
     public SimpleProduct(String name, int price) {
-        super(name, "Обычный продукт");
+        super(name);
         if (price < 0) {
             throw new IllegalArgumentException("Цена не может быть отрицательной");
         }
@@ -19,5 +19,15 @@ public class SimpleProduct extends Product {
     @Override
     public boolean isSpecial() {
         return false;
+    }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

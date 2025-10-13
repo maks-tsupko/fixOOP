@@ -4,7 +4,7 @@ public class FixPriceProduct extends Product {
     private static final int FIXED_PRICE = 100;
 
     public FixPriceProduct(String name) {
-        super(name, "Товар с фиксированной ценой");
+        super(name);
     }
 
     @Override
@@ -15,5 +15,15 @@ public class FixPriceProduct extends Product {
     @Override
     public boolean isSpecial() {
         return false;
+    }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

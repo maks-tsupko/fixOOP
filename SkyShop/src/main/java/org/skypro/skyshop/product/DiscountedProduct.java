@@ -5,7 +5,7 @@ public class DiscountedProduct extends Product {
     private final int discount;
 
     public DiscountedProduct(String name, int basePrice, int discount) {
-        super(name, "Продукт со скидкой " + discount + "%");
+        super(name);
         if (basePrice < 0) {
             throw new IllegalArgumentException("Цена не может быть отрицательной");
         }
@@ -24,5 +24,15 @@ public class DiscountedProduct extends Product {
     @Override
     public boolean isSpecial() {
         return discount > 0;
+    }
+
+    @Override
+    public String getStringRepresentation() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

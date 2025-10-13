@@ -1,24 +1,25 @@
 package org.skypro.skyshop.search;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class SearchEngine {
-    private final List<Searchable> data = new ArrayList<>();
+    private final Set<Searchable> items = new HashSet<>();
 
-    public void add(Searchable searchable) {
-        data.add(searchable);
+    public void add(Searchable item) {
+        items.add(item); // дубликаты автоматически игнорируются
     }
 
-    public List<Searchable> search(String query) {
-        String lowerCaseQuery = query.toLowerCase();
-        List<Searchable> results = new ArrayList<>();
-        for (Searchable s : data) {
-            if (s.getName().toLowerCase().contains(lowerCaseQuery) ||
-                s.getDescription().toLowerCase().contains(lowerCaseQuery)) {
-                results.add(s);
+    public Set<Searchable> search(String text) {
+        Set<Searchable> results = new TreeSet<>(new SearchableComparator());
+        for (Searchable item : items) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                results.add(item);
             }
         }
-        return results;
+   ;     return results;
     }
 }
+
