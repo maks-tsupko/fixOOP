@@ -6,7 +6,7 @@ import java.util.Objects;
 public abstract class Product implements Searchable {
     protected String name;
 
-    public Product(String name, String s) {
+    public Product(String name) {
         this.name = name;
     }
 
